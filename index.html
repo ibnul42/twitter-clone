@@ -29,8 +29,8 @@
             </div>
             <div class="main">
                 <div class="tweets-search-container">
-                    <input type="text" name="" id="user-search-input" placeholder="Search Twitter">
-                    <i class="fas fa-search fa-flip-horizontal"></i>
+                    <input type="text" name="" id="user-search-input" placeholder="Search Twitter" onkeyup="onEnter(event)">
+                    <i class="fas fa-search fa-flip-horizontal" onclick="getTwitterData()"></i>
                 </div>
                 <div class="tweets-list">
                     <div class="tweet-container">
@@ -47,11 +47,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tweet-images-container">
-                            <div class="tweet-image">
-
-                            </div>
+                        <div class="tweet-video-container">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                            </video>
                         </div>
+                        <!-- <div class="tweet-images-container">
+                            <div class="tweet-image"></div>
+                        </div> -->
                         <div class="tweet-text-container">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat consequatur a aliquam voluptas, facere error.
                         </div>
