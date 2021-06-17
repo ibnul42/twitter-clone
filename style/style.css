@@ -1,142 +1,167 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
     background-color: #0F0F11;
 }
 
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
 .navigation-container {
-    width: 20%;
+    border-right: 1px solid #1C1C1C;
     max-width: 100px;
     min-width: 70px;
-    border: 1px solid #1C1C1C;
-}
-
-.main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.tweets-sidebar-container {
-    flex: 1;
-}
-
-.tweets-search-container {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #979797;
-    color: white;
-}
-
-.tweets-search-container input {
-    flex: 1;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.tweets-search-container input:focus {
-    outline: none;
-}
-
-.tweets-search-container i {
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    padding-left: 10px;
-}
-
-.tweets-list {
-    margin: 20px;
-}
-.tweets-sidebar {
-    width: 300px;
-    height: 500px;
-    margin: 30px;
-    background-color: white;
-    border-radius: 40px;
-    border: 1px solid #979797;
-    overflow: hidden;
-}
-
-.tweets-trending {
-    height: 300px;
-    background-color: #f2f2f2;
-    margin: 10px;
-    border-radius: 40px;
-}
-
-.tweets-trending h5 {
-    font-size: 12px;
-    color: #848586;
-    margin-top: 0;
-    padding-left: 20px;
-    padding-top: 35px;
-
-}
-
-.tweets-trending ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.tweets-trending ul li {    
-    border-top: 1px solid #D8D8D8;
-    color: #A5A5A6;    
-    padding-left: 20px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    cursor: pointer;
+    width: 20%;
 }
 
 .navigation {
-    color: white;
-    margin-top: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100px;
+    min-width: 70px;
+    width: 20%;
+}
+
+nav {
+    padding-top: 40px;
 }
 
 .logo {
     display: flex;
     justify-content: center;
-}
-
-.logo i {
-    font-size: 35px;
+    font-size: 32px;
+    color: white;
 }
 
 .home-link {
+    color: #00ADFF;
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    border-right: 3px solid #00adff;
+    position: relative;
     height: 40px;
     align-items: center;
 }
 
-.home-link i {
-    color: #00adff;
+.home-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #00ADFF;
 }
 
-.profile-container {    
+.profile-container {
     display: flex;
+    width: 100%;
+    margin-top: 22px;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .profile {
     width: 30px;
     height: 30px;
     background-color: white;
-    border: 1px solid #979797;
     border-radius: 50%;
+    border: 1px solid #979797;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/IMG_4603.JPG);
+}
+
+.main {
+    flex: 1;
+    padding-top: 40px;
+    display: flex;
+    overflow: scroll;
+}
+
+.tweets-container {
+    flex: 1;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.tweets-sidebar-container {
+    flex: 1;
+    position: relative;
+}
+
+.tweets-sidebar {
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    border-radius: 40px;
+    position: fixed;
+    border: 1px solid #979797;
+}
+
+.tweets-trending {
+    background-color: #F2F2F2;
+    border-radius: 40px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.tweets-trending h5 {
+    font-size: 12px;
+    color: #848586;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.tweets-trending ul {
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tweets-trending ul li {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-top: 0.5px solid #D8D8D8;
+    font-weight: 600;
+    padding-left: 20px;
+    color: #A5A5A6;
+    cursor: pointer;
+}
+
+.tweets-search-input {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #979797;
+}
+
+.tweets-search-input input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.tweets-search-input input:focus {
+    outline: none;
+}
+
+.tweets-search-input i {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
